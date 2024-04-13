@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        margin: 100px auto;
+        justify-content: center;
+
+        height: 300px;
+      }
+      .btn-Container {
+        display: flex;
+        justify-content: center;
+        margin: 100px auto;
+
+        align-items: center;
+      }
+      button {
+        margin: 10px;
+        background-color: cyan;
+        height: 10px;
+        box-shadow: 2px 2px blue 2px;
+        transition: 0.5s;
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+      }
+      button:hover {
+        background-color: red;
+        color: white;
+        transform: scale(1.2);
+      }
+      body {
+        display: flex;
+        border: 4px groove red;
+        width: 40%;
+        margin: 50px auto;
+        justify-content: center;
+      }
+      .btn-Container > .btn-Container,
+      input {
+        display: flex;
+        margin: 10px 10px 10px 10px;
+      }
+      input[type="number"] {
+        margin: 20px auto;
+        width: 300px;
+        height: 50px;
+      }
+      input[type="text"] {
+        margin: 20px auto;
+        width: 300px;
+        height: 50px;
+      }
+      #show {
+        display: flex;
+        margin: 20px auto;
+        width: 300px;
+        height: 50px;
+      }
+      #txt1,
+      #txt2,
+      #show {
+        font-size: 25px;
+        font-family: cursive;
+      }
+      #Calculate {
+        font-size: 15px;
+        height: 30px;
+        display: flex;
+        margin: 10px auto;
+        background: blue;
+        color: white;
+      }
+      #Calculate:hover {
+        background: cyan;
+        color: black;
+      }
+      table {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        width: 85%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- first table -->
+      <div class="container">
+        <form class="input">
+          <h1 style="text-align: center">Simple Calculator Using JavaScript</h1>
+          <input
+            style="padding-left: 10px; text-align: center"
+            id="txt1"
+            type="number"
+            placeholder="Number1"
+          />
+          <input
+            style="padding-left: 10px; text-align: center"
+            id="txt2"
+            type="number"
+            placeholder="Number2"
+          />
+          <input
+            style="padding-left: 10px; text-align: center"
+            id="show"
+            type="txt"
+            placeholder="Result"
+            readonly
+          />
+        </form>
+
+        <div class="btn-Container">
+          <button style="width: 100px; height: 50px; display: flex" id="sum">
+            +
+          </button>
+          <button style="width: 100px; height: 50px; display: flex" id="minus">
+            -
+          </button>
+          <button
+            style="width: 100px; height: 50px; display: flex"
+            id="multiplies"
+          >
+            x
+          </button>
+          <button
+            style="width: 100px; height: 50px; display: flex"
+            id="divided"
+          >
+            /
+          </button>
+          <button style="width: 100px; height: 50px; display: flex" id="Remain">
+            %
+          </button>
+        </div>
+        <!-- second table -->
+        <h1 style="text-align: center">
+          <u>Simple Calculator Using JavaScript</u>
+        </h1>
+        <form action="">
+          <table border="1">
+            <tr>
+              <td>
+                <label
+                  style="font-size: 20px; font-family: monospace"
+                  for="number1"
+                  >Enter 1st value:</label
+                >
+              </td>
+              <td>
+                <input
+                  type="number"
+                  id="number1"
+                  style="
+                    margin: 0;
+                    display: inline;
+                    font-size: 20px;
+                    padding-left: 10px;
+                    font-family: monospace;
+                    text-align: center;
+                  "
+                  placeholder="1st value"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  style="font-size: 20px; font-family: monospace"
+                  for="number2"
+                  >Enter 2nd value:</label
+                >
+              </td>
+              <td>
+                <input
+                  type="number"
+                  id="number2"
+                  style="
+                    margin: 0;
+                    display: inline;
+                    font-size: 20px;
+                    padding-left: 10px;
+                    font-family: monospace;
+                    text-align: center;
+                  "
+                  placeholder="2nd value"
+                />
+              </td>
+            </tr>
+            <tr style="border: 2px solid red">
+              <td style="display: flex; justify-content: center">
+                <select
+                  style="
+                    color: red;
+
+                    font-size: 25px;
+                    text-align: center;
+                  "
+                  id="operation"
+                >
+                  <option value="sum">+</option>
+                  <option value="dork">-</option>
+                  <option value="kun">x</option>
+                  <option value="jaek">/</option>
+                  <option value="somnorl">%</option>
+                </select>
+              </td>
+              <td>
+                <button id="Calculate">Calculate</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label style="font-size: 20px; font-family: monospace" for="Cal"
+                  >Result:</label
+                >
+              </td>
+              <td>
+                <input
+                  name="Cal"
+                  id="respone"
+                  type="text"
+                  readonly
+                  style="
+                    margin: 0;
+                    display: inline;
+                    width: 98%;
+                    text-align: center;
+                    font-size: 20px;
+                  "
+                />
+              </td>
+            </tr>
+          </table>
+
+          <br />
+
+          <br />
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    //Javascript for the 1st form
+    //plus
+    document.getElementById("sum").addEventListener("click", function () {
+      let num1 = document.getElementById("txt1");
+      let num2 = document.getElementById("txt2");
+      let total = parseFloat(num1.value) + parseFloat(num2.value);
+      document.getElementById("show").value = total;
+    });
+    //minus
+    document.getElementById("minus").addEventListener("click", function () {
+      let num1 = document.getElementById("txt1");
+      let num2 = document.getElementById("txt2");
+      let total = parseFloat(num1.value) - parseFloat(num2.value);
+      document.getElementById("show").value = total;
+    });
+    //multi
+    document
+      .getElementById("multiplies")
+      .addEventListener("click", function () {
+        let num1 = document.getElementById("txt1");
+        let num2 = document.getElementById("txt2");
+        let total = parseFloat(num1.value) * parseFloat(num2.value);
+        document.getElementById("show").value = total;
+      });
+    //div
+    document.getElementById("divided").addEventListener("click", function () {
+      let num1 = document.getElementById("txt1");
+      let num2 = document.getElementById("txt2");
+      if (num2 !== 0) {
+        let total = parseFloat(num1.value) / parseFloat(num2.value);
+        document.getElementById("show").value = total;
+      } else {
+        document.getElementById("show").value = "Infinity";
+      }
+    });
+    //number remaining
+    document.getElementById("Remain").addEventListener("click", function () {
+      let num1 = document.getElementById("txt1");
+      let num2 = document.getElementById("txt2");
+      let total = parseFloat(num1.value) % parseFloat(num2.value);
+      document.getElementById("show").value = total;
+    });
+  </script>
+  <script>
+    //Javascirpt for the 2nd form
+
+    //note : if we want to call option tag by id we must use with option value instead
+    document
+      .getElementById("Calculate")
+      .addEventListener("mouseover", function () {
+        let lek1 = document.getElementById("number1");
+        let lek2 = document.getElementById("number2");
+        let Cal;
+        let operator = document.getElementById("operation");
+
+        switch (operator.value) {
+          case "sum":
+            Cal = parseFloat(lek1.value) + parseFloat(lek2.value);
+            document.getElementById("respone").value = Cal;
+
+            console.log(Cal);
+            break;
+          case "dork":
+            Cal = parseFloat(lek1.value) - parseFloat(lek2.value);
+
+            break;
+          case "kun":
+            Cal = parseFloat(lek1.value) * parseFloat(lek2.value);
+
+            break;
+          case "jaek":
+            if (parseFloat(lek2.value) !== 0) {
+              Cal = parseFloat(lek1.value) / parseFloat(lek2.value);
+            } else {
+              Cal = "Infinity";
+            }
+            break;
+          case "somnorl":
+            Cal = parseFloat(lek1.value) % parseFloat(lek2.value);
+            break;
+
+          default:
+            Cal = "NO operating";
+            break;
+        }
+        document.getElementById("respone").value = Cal;
+      });
+  </script>
+</html>
